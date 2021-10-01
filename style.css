@@ -484,7 +484,7 @@ header {
     grid-area: btn;
     border-radius: .8rem;
     border:none;
-    padding: .5rem 1rem;
+    padding: .5rem 1.1rem;
     color:white;
     background:hsl(353, 82%, 43%);
     width:65%;
@@ -503,6 +503,10 @@ header {
         justify-items: center;
     }
     .price-description{
+        font-size:.8rem;
+    }
+
+    .cta-price{
         font-size:.8rem;
     }
 
