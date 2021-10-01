@@ -120,6 +120,9 @@ header {
 .video{
     grid-area:video;
     border-radius: 1rem;
+    min-height:250px;
+    margin-top: 3rem;
+    margin-bottom:3rem;
    
 }
 
@@ -131,7 +134,9 @@ header {
         grid-template-areas:"h1 h1"
         "video video"
         "btn btn";
-        grid-template-rows: auto 50vh; 
+        
+        grid-template-rows: 25vh 50vh 25vh; 
+        grid-row-gap:1rem;
     }
     .hero-img{
         display:none;
@@ -164,6 +169,67 @@ header {
 }
 
 /*Depoimentos*/
+/*carousel*/
+
+.carousel{
+    display:flex;
+    align-items: center;
+    margin:2rem auto;  
+    overflow:hidden;
+    position:relative;
+    width:300px;  
+
+}
+
+@media (max-width:400px){
+    .carousel{
+        width:150px;
+    }
+
+}
+
+.caroseul-container{
+    display:flex;
+    transform: translateX(0);
+    transition:transform 0.25s ease-in-out;
+}
+
+.caroseul-container img {
+    width:100%;
+    border-radius: 15px;
+    border:15px solid #163450;;
+
+}
+.carousel_button{
+    background:#c60c1e;
+    border:0;
+    border-radius: 50%;
+    color:white;
+    cursor:pointer;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding:.5rem .5rem;
+    opacity:0.75;
+    position:absolute;
+    transition: opactity 0.25s;
+    transition:transform 0.25s ease-in-out;
+    z-index: 1;
+
+}
+.previous {
+    left:.5rem;
+}
+.next {
+    right:.5rem;
+    
+}
+
+.carousel_button:hover,.carousel_button:focus{
+    opacity: 1;
+    transform: scale(1.1);
+}
+/*Fim do carosel*/
+
 .dep-title{
     text-align: center;
     text-transform: uppercase;
@@ -189,10 +255,6 @@ header {
     border-radius: 1rem;
 }
 
-.img-dep{
-    width:85%;
-    height:auto;
-}
 
 @media (max-width:800px){
     .depoimentos-container{
