@@ -402,7 +402,6 @@ header {
     font-weight: bolder;
 }
 .price{
-    padding-bottom: 1rem;
     margin-bottom: 2.5rem;
 
 }
@@ -416,13 +415,15 @@ header {
     margin-bottom: 1rem;
     align-items: center;
     
+    
 }
 
 
 .price-description{
     text-transform: lowercase;
     text-transform: capitalize;
-    font-size:clamp(.5rem, 10vw, 1.5rem); 
+    font-size:clamp(.4rem, 10vw, 1.5rem); 
+
 }
 .price-red{
     text-decoration: line-through;
@@ -435,7 +436,6 @@ header {
     width:100%;
     border:2px solid var(--red-color);
     border-radius: .5rem;
-    padding:1rem;
     margin:0 auto;
     margin-bottom: 1rem;
     box-shadow: -3px 1px 2px 2px var(--dark-blue);
@@ -484,16 +484,17 @@ header {
     grid-area: btn;
     border-radius: .8rem;
     border:none;
-    padding: .5rem 1.1rem;
+    padding: .8rem 1.1rem;
     color:white;
-    background:hsl(353, 82%, 43%);
+    background:hsl(115, 82%, 43%);
     width:65%;
     transition:transform 100ms ease-in;
     animation: increase 1.5s ease-in infinite;
+    width:80%;
 
 }
 .cta-price:hover,.cta-price:focus{
-    background:hsl(353, 82%, 60%);
+    background:hsl(115, 82%, 60%);
     cursor:pointer;
     
 }
@@ -503,12 +504,14 @@ header {
         justify-items: center;
     }
     .price-description{
-        font-size:.8rem;
+        font-size:.5rem;
     }
 
     .cta-price{
         font-size:.8rem;
+        width:100%;
     }
+
 
 }
 @keyframes increase {
