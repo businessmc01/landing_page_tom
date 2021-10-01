@@ -431,6 +431,7 @@ header {
     text-decoration-color:var(--red-color);
     text-align: right;
     margin-right: 1rem;
+    font-size:clamp(.4rem, 10vw, 1.5rem); 
 }
 .price-container{
     width:100%;
@@ -504,6 +505,9 @@ header {
         justify-items: center;
     }
     .price-description{
+        font-size:.5rem;
+    }
+    .price-red{
         font-size:.5rem;
     }
 
