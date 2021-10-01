@@ -183,7 +183,7 @@ header {
 
 @media (max-width:400px){
     .carousel{
-        width:150px;
+        width:200px;
     }
 
 }
@@ -391,6 +391,8 @@ header {
 }
 
 /*price*/
+
+
 .price-title{
     text-align: center;
     text-transform: uppercase;
@@ -412,25 +414,31 @@ header {
     color:var(--dark-blue);
     font-weight: bold;
     margin-bottom: 1rem;
+    align-items: center;
+    
 }
 
 
 .price-description{
     text-transform: lowercase;
     text-transform: capitalize;
+    font-size:clamp(.5rem, 10vw, 1.5rem); 
 }
 .price-red{
     text-decoration: line-through;
     text-decoration-thickness: .15rem;
     text-decoration-color:var(--red-color);
+    text-align: right;
+    margin-right: 1rem;
 }
 .price-container{
-    width:80%;
-    border-bottom:2px solid var(--red-color);
+    width:100%;
+    border:2px solid var(--red-color);
     border-radius: .5rem;
     padding:1rem;
     margin:0 auto;
     margin-bottom: 1rem;
+    box-shadow: -3px 1px 2px 2px var(--dark-blue);
 }
 
 .price-total{
@@ -451,15 +459,17 @@ header {
 }
 .price-12{
     margin:0 auto;
-    width:50%;
+    width:fit-content;
     border:2px solid var(--red-color);
-    padding:1rem;
+    padding:.5rem 2rem;
     font-size: 2.5rem;
     color:var(--dark-blue);
     font-weight:bolder;
     border-radius: 1.25rem;
     margin-top:1rem;
     margin-bottom:1rem;
+    box-shadow: -3px 1px 2px 2px var(--dark-blue);
+    text-shadow:-2px 1px var(--dark-blue) 
 }
 .big-text{
     font-size: 2.6rem;
@@ -492,6 +502,9 @@ header {
         grid-template-columns: 1fr;
         justify-items: center;
     }
+    .price-description{
+        font-size:.8rem;
+    }
 
 }
 @keyframes increase {
@@ -509,12 +522,14 @@ header {
 }
 .svg-price{
     display: block;
-    transform: rotate(180deg);
+    transform: translateY(-1rem) rotate(180deg) ;
+
 }
 /*FAQs style*/
 .svg-faq{
     display: block;
     transform:rotate(180deg);
+    
     
 }
 .faqs{
