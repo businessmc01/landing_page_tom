@@ -52,8 +52,11 @@ header {
 }
 
 .hero{
-    background-image: url(assets/imgs/background-hero.jpg);
-    background-blend-mode: overlay;
+    background: url(assets/imgs/background-hero.jpg);
+    background-color:var(--main-bg);
+    background-size:cover;
+    background-blend-mode:soft-light;
+    
 
 
 }
@@ -181,7 +184,10 @@ header {
 
 /*Depoimentos*/
 
-
+.svg-depoimentos{
+    display:block;
+    transform: translateY(-1rem);
+}
 .img-dep {
     width:100%;
     border-radius: 15px;
@@ -228,12 +234,61 @@ header {
     
 }
 
+/*Sobre o professor*/
+.professor{
+    background:var(--red-color);
+    color:#fff;
+    padding-bottom: 3rem;
+    transform:translateY(.2rem);
+}
+.professor-container{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    grid-column-gap: 2rem;
+}
 
+.professor-title{
+    font-size:clamp(.8rem, 10vw, 2.5rem); 
+    margin-bottom: 2rem;
+}
 
+.professor-description{
+    margin-bottom:1rem;
+    font-size:clamp(.8rem, 10vw, 1.5rem); 
+}
+
+.tom-img{
+  width:100%;
+  height:auto;
+
+}
+
+@media (max-width:650px){
+    .professor-container{
+        grid-template-columns: auto;
+    }
+    .tom-img{
+        display:block;
+        margin:0 auto;
+        width:65%;
+    }
+
+    .professor-description{
+        text-align: center;
+    }
+}
 
 /*Bonus style*/
 
-
+.title-bonus{
+    text-align: center;
+    color:#fff;
+    letter-spacing:.1rem ;
+    font-size: clamp(1rem, 15vw, 3rem); 
+    padding-top:1rem;
+    padding-bottom: 1rem;
+}
 .bonus{
     background-color: #fff;
     text-align: center;
@@ -299,6 +354,8 @@ header {
 }
 .up{
     display: block;
+    background:var(--red-color);
+    transform:translateY(.4rem);
     
 }
 
