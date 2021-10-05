@@ -153,6 +153,7 @@ header {
         "video video"
         "btn btn";
         grid-template-rows: 25vh 50vh 25vh; 
+        grid-gap:0rem .4rem;
     }
 
     .container{
