@@ -171,6 +171,7 @@ header {
     background-color: var(--main-bg);
     text-align: center;
     padding-top:1rem;
+    padding-bottom:2rem;
     color:#fff;
 }
 .text-description{
@@ -205,8 +206,7 @@ header {
 .svg-depoimentos{
     display:block;
     transform: rotate(180deg);  
-    background:#fff;
-    
+    background:#fff; 
 }
 .img-dep {
     width:100%;
@@ -227,7 +227,7 @@ header {
     
 }
 
-.depoimentos-container{
+.depoimentos-container-imagem{
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1rem;
@@ -242,10 +242,18 @@ header {
     min-height:300px;
     border-radius: 1rem;
 }
+.depoimentos-container-videos{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1rem;
+    grid-row-gap:2.5rem;
+    padding:2rem;
+    justify-items: center;
 
+}
 
 @media (max-width:800px){
-    .depoimentos-container{
+    .depoimentos-container-imagem,.depoimentos-container-videos{
         grid-template-columns: auto;
         grid-row-gap: 2rem;
         align-items: center;
@@ -256,6 +264,36 @@ header {
     
 }
 
+
+/*Quando devo começar style*/
+.description_2{
+    background:var(--main-bg);
+}
+.description_2_title{
+    text-align: center;
+    letter-spacing:.1rem ;
+    font-size: clamp(.5rem, 10vw, 2rem); 
+    text-transform: uppercase;
+    color:#fff;
+    margin-bottom: 1rem;
+}
+
+.description_2_body{
+    color:white;
+    margin-top:1rem;
+    font-size:clamp(.7rem, 10vw, 1.4rem); 
+    text-align: center;
+}
+.description_2_svg{
+    display:block;
+    background:var(--red-color);
+}
+
+.description_2_svg_up{
+    transform:rotate(180deg);
+    background:#fff;
+    display:block;
+}
 /*Sobre o professor*/
 
 /*Imagem circular*/
@@ -381,7 +419,6 @@ header {
     background:var(--red-color);
     color:#fff;
     padding-bottom: 3rem;
-    transform:translateY(.2rem);
 }
 .professor-container{
     display:grid;
@@ -427,11 +464,13 @@ header {
 
 .title-bonus{
     text-align: center;
-    color:#fff;
-    letter-spacing:.1rem ;
-    font-size: clamp(1rem, 15vw, 3rem); 
-    padding-top:1rem;
-    padding-bottom: 1rem;
+    text-transform: uppercase;
+    color:hsl(353,82%,43%);
+    font-size:clamp(.5rem, 10vw, 3rem); 
+    margin-bottom:2.5rem;
+    font-weight: bolder;
+    text-shadow:2px 2px 5px red;
+    margin-top:1rem;
 }
 .bonus{
     background-color: #fff;
